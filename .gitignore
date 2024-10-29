@@ -1,5 +1,5 @@
 node_modules
 dist
-typings
+# typings
 .DS_Store
 docs
