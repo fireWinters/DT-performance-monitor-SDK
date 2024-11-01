@@ -2,7 +2,7 @@
 {
     "compilerOptions": {
       "strict": true,
-      "declaration": true,
+      // "declaration": true,
       "declarationMap": true,
       "module": "ESNext",
       "target": "ESNext",
@@ -12,7 +12,10 @@
       "allowSyntheticDefaultImports": true,
       "experimentalDecorators": true,
       "emitDecoratorMetadata": true,
-      "declarationDir": "./typings"
+      "declarationDir": "./typings",
+      "declaration": true,        // 生成 .d.ts 文件
+      "emitDeclarationOnly": true, // 只生成声明文件，而不生成编译后的 JavaScript
+      "outDir": "./dist"         // 输出文件目录，存放生成的声明文件
     },
     "include": ["./src/**/*"],
     "exclude": ["node_modules", "dist", "**/*.spec.ts"]
