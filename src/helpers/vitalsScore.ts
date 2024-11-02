@@ -36,8 +36,19 @@ export const getVitalsScore = (
   if (!webVitalsScore[measureName]) {
     return null;
   }
-  if (value <= webVitalsScore[measureName][0]) {
+  // 增加一个类型限制，不然tsc执行不过去
+  if (typeof value === 'number'&&value <= webVitalsScore[measureName][0]) {
     return 'good';
   }
-  return value <= webVitalsScore[measureName][1] ? 'needsImprovement' : 'poor';
+  if (typeof value === 'number'&&value <= webVitalsScore[measureName][1]) {
+    return 'needsImprovement';
+  }else{
+    return 'poor';
+  }
+  
+  // if (value <= webVitalsScore[measureName][0]) {
+  //   console.log(typeof value,'数值',value)
+  //   return 'good';
+  // }
+  // return value <= webVitalsScore[measureName][1] ? 'needsImprovement' : 'poor';
 };
