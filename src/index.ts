@@ -17,7 +17,7 @@ import { isPerformanceSupported } from './helpers/isSupported';
 import { IReportData, IDianaTangOptions } from './typings/types';
 import ErrorTrace from './error';
 import analyticsTracker from './data/analyticsTracker';
-import ReportData from './data/reportData';
+import ReportData from './data/ReportData';
 import { didVisibilityChange } from './helpers/onVisibilityChange';
 import { getNetworkInformation } from './helpers/getNetworkInformation';
 import { reportStorageEstimate } from './data/storageEstimate';
