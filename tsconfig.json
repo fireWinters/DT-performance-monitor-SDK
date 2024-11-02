@@ -2,6 +2,7 @@
 {
     "compilerOptions": {
       "strict": true,
+      "baseUrl":"./src",
       // "declaration": true,
       "declarationMap": true,
       "module": "ESNext",
